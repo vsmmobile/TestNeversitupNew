@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.test.Neversitup.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_fibonacci"
+        android:name="com.test.Neversitup.ui.fibonacci.FibonacciFragment"
+        android:label="@string/title_Fibonacci"
+        tools:layout="@layout/fragment_fibonacci" />
+
+    <fragment
+        android:id="@+id/navigation_primeNumber"
+        android:name="com.test.Neversitup.ui.primeNumber.PrimeNumberFragment"
+        android:label="@string/title_PrimeNumber"
+        tools:layout="@layout/fragment_prime_number" />
+
+
+    <fragment
+        android:id="@+id/navigation_filterArray"
+        android:name="com.test.Neversitup.ui.filterArray.FilterArrayFragment"
+        android:label="@string/title_FilterArray"
+        tools:layout="@layout/fragment_filter_array" />
+</navigation>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_Top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:text="Show Currency"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textTitleUSD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:text="USD"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_center"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_Top"
+        style="@style/textview_bold_black"/>
+
+    <TextView
+        android:id="@+id/textUSD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text=""
+        style="@style/textview_black"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toEndOf="@+id/textTitleUSD"
+        app:layout_constraintTop_toTopOf="@+id/textTitleUSD"/>
+    <TextView
+        android:id="@+id/textTitleGBP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:text="GBP"
+        app:layout_constraintEnd_toEndOf="@+id/textTitleUSD"
+        app:layout_constraintStart_toStartOf="@+id/textTitleUSD"
+        app:layout_constraintTop_toBottomOf="@+id/textTitleUSD"
+        style="@style/textview_bold_black"/>
+    <TextView
+        android:id="@+id/textGBP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text=""
+        style="@style/textview_black"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toEndOf="@+id/textTitleGBP"
+        app:layout_constraintTop_toTopOf="@+id/textTitleGBP"/>
+    <TextView
+        android:id="@+id/textTitleEUR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:text="EUR"
+        app:layout_constraintEnd_toEndOf="@+id/textTitleGBP"
+        app:layout_constraintStart_toStartOf="@+id/textTitleGBP"
+        app:layout_constraintTop_toBottomOf="@+id/textTitleGBP"
+        style="@style/textview_bold_black"/>
+
+
+    <TextView
+        android:id="@+id/textEUR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text=""
+        style="@style/textview_black"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toEndOf="@+id/textTitleEUR"
+        app:layout_constraintTop_toTopOf="@+id/textTitleEUR"/>
+
+    <FrameLayout
+        android:id="@+id/flDropdown"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/textTitleEUR"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/textEUR"
+        style="@style/boxLine"
+        >
+        <TextView
+            android:text="xxx"
+            style="@style/textview_black"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="10dp"
+            android:visibility="gone"
+            />
+        <Spinner
+            android:id="@+id/spinnerEcgM"
+            style="@style/spinnerDropdown"
+            android:layout_width="match_parent"
+
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/lnEdittext"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textEUR"
+        app:layout_constraintStart_toStartOf="@+id/textEUR"
+        app:layout_constraintTop_toTopOf="@+id/flDropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/flDropdown"
+        style="@style/boxLine"
+        >
+
+        <EditText
+            android:id="@+id/edittextBTC"
+            style="@style/edittext_input_text"
+            android:gravity="left|center"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text=""
+            >
+        </EditText>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textTitleBTC"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        android:text="Show BTC"
+        app:layout_constraintEnd_toEndOf="@+id/flDropdown"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/flDropdown"
+        style="@style/textview_bold_black"/>
+
+
+    <TextView
+        android:id="@+id/textBTC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text=""
+        style="@style/textview_black"
+        app:layout_constraintEnd_toEndOf="@+id/lnEdittext"
+        app:layout_constraintStart_toStartOf="@+id/lnEdittext"
+        app:layout_constraintTop_toTopOf="@+id/textTitleBTC"
+        app:layout_constraintBottom_toBottomOf="@+id/textTitleBTC"/>
+
+    <LinearLayout
+        android:id="@+id/lnListview"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:padding="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/textTitleBTC"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline_bottom"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/textviewDateTime"
+                style="@style/textview_bold_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="DATA"
+                />
+            <TextView
+                android:id="@+id/textviewUSD"
+                style="@style/textview_bold_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:layout_weight="1"
+
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="USD"/>
+            <TextView
+                android:id="@+id/textviewGBP"
+                style="@style/textview_bold_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="GBP"/>
+            <TextView
+                android:id="@+id/textviewEUR"
+                style="@style/textview_bold_black"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="EUR"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.4"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="visible"
+
+            >
+
+            <ListView
+                android:id="@+id/listviewCurrentprice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/white"
+                android:dividerHeight="3dip" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_bottom"
+        android:visibility="gone"
+        >
+        <ImageButton
+            android:id="@+id/btnGetData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center"
+            android:scaleType="fitXY"
+            style="@style/button_ImageButton"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="GET DATA" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
